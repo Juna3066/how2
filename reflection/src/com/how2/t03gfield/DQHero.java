@@ -4,8 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DQHero extends Hero{
+    public static String desc;
+
     public String level;
     private List<String> gfs;
+
+    static {
+        desc = "斗气大陆诞生强者";
+        System.out.println("desc = " + desc);
+    }
 
     public DQHero(){
         gfs = new ArrayList<>();
@@ -31,11 +38,15 @@ public class DQHero extends Hero{
         this.gfs = gfs;
     }
 
+    /*关于继承 继承公有属性*/
     @Override
     public String toString() {
         return "DQHero{" +
                 "level='" + level + '\'' +
-                ", gf=" + gfs +
+                ", gfs=" + gfs +
+                ", name='" + name + '\'' +
+                ", damage=" + damage +
+                ", id=" + id +
                 '}';
     }
 }
